@@ -178,3 +178,4 @@ MonoBehaviour:
   speed: 2
   hp: 1
   explosionPrefab: {fileID: 1219339679686780927, guid: dec853b55d7aea84bae664440bf923ea, type: 3}
+  enemyBulletPrefab: {fileID: 9068462343967000505, guid: 7ca11334dd1472a408e5cfbf6f1e895b, type: 3}

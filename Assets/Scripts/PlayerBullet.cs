@@ -14,7 +14,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            AudioManager.Instance.PlayHitEnemy();
+            AudioManager.Instance.PlayHit();
             Destroy(gameObject);
         }
     }

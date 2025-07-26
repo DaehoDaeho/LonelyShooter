@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float fireRate = 0.2f;
     float nextFire = 0f;
 
+    public int hp = 1;
+    public GameObject explosionPrefab;   // 플레이어 폭발 이펙트(같은 거 써도 됨)
+
     void Update()
     {
         // 이동
@@ -27,8 +30,24 @@ public class Player : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
-            AudioManager.Instance.PlayPlayerBullet();
+            AudioManager.Instance.PlayBullet();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("EnemyBullet") || other.CompareTag("Enemy"))
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        AudioManager.Instance.PlayHit();
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        gameObject.SetActive(false); // 플레이어 비활성화
+        GameManager.Instance.OnGameOver(); // 게임매니저에 알리기
     }
 }
 

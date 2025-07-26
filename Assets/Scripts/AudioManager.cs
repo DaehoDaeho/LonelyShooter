@@ -4,21 +4,21 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    public AudioSource playerBullet;
-    public AudioSource hitEnemy;
+    public AudioSource bullet;
+    public AudioSource hit;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public void PlayPlayerBullet()
+    public void PlayBullet()
     {
-        playerBullet.Play();
+        bullet.Play();
     }
 
-    public void PlayHitEnemy()
+    public void PlayHit()
     {
-        hitEnemy.Play();
+        hit.Play();
     }
 }
