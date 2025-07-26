@@ -19,8 +19,19 @@ public class Enemy : MonoBehaviour
         if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
-            AudioManager.Instance.PlayBullet();
+
+            // 일직선으로 발사.
+            //Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+            //AudioManager.Instance.PlayBullet();
+
+            // 플레이어 찾기
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                Vector2 dir = (playerObj.transform.position - transform.position).normalized;
+                GameObject bullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
+                bullet.GetComponent<EnemyBullet>().SetDirection(dir);
+            }
         }
     }
 
