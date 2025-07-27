@@ -19,11 +19,16 @@ public class BackgroundScroller : MonoBehaviour
             bg.position += Vector3.down * scrollSpeed * Time.deltaTime;
 
             // 이미지가 화면 아래로 벗어나면 위로 재배치
-            if (bg.position.y < -imageHeight)
+            //if (bg.position.y < -imageHeight)
+            //{
+            //    float highestY = GetHighestY(); // 다른 이미지의 위치 위로 이동
+            //    bg.position = new Vector3(bg.position.x, highestY + imageHeight, bg.position.z);
+            //}
+
+            if (bg.position.y < -12.0f)
             {
-                float highestY = GetHighestY(); // 다른 이미지의 위치 위로 이동
-                bg.position = new Vector3(bg.position.x, highestY + imageHeight, bg.position.z);
-            }
+                bg.position = new Vector3(bg.position.x, 12.0f, bg.position.z);
+            }   
         }
     }
 
