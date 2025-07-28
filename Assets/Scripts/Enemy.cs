@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public GameObject explosionPrefab;
 
     public GameObject enemyBulletPrefab;
-    float fireRate = 3.0f;    // 識 踐朝 除問
+    float fireRate = 5.0f;    // 識 踐朝 除問
     float nextFire = 0f;
 
     void Update()
