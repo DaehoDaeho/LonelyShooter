@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
                 Vector2 dir = (playerObj.transform.position - transform.position).normalized;
                 GameObject bullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity);
                 bullet.GetComponent<EnemyBullet>().SetDirection(dir);
+                AudioManager.Instance.PlayBullet();
             }
         }
     }
