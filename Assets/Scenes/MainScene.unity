@@ -994,7 +994,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0b04d214569c3d7439ee338d048b623f, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0b04d214569c3d7439ee338d048b623f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b06d87f5f517b142a3b2f51370d65b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 2
+  scrollSpeed: 1.2
   backgrounds:
   - {fileID: 84183511}
   - {fileID: 129038926}
@@ -1744,7 +1744,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d1b447c52a742034583ef940366f55f8, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d1b447c52a742034583ef940366f55f8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
